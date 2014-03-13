@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     statserver.vm.provision "ansible" do |ansible| 
       ansible.playbook = "statserver.yml"
+      ansible.host_key_checking = "false"
     end 
   end
 
